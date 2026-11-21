@@ -161,7 +161,7 @@ function render(){const t=L(),h=new Date().getHours();
   $("#greet").textContent=t.g[h<5?0:h<12?1:h<18?2:h<23?3:0];
   $("#title").textContent=tab==="home"?"Quill Home":t.tabs[tab];
   $("#langBtn").textContent=S.lang==="uk"?"UA":"EN"; document.documentElement.lang=S.lang;
-  $("#tabs").innerHTML=Object.entries({home:"home",rooms:"rooms",scenes:"spark",energy:"bolt"}).map(([k,ic])=>`<button class="${tab===k?"on":""}" data-tab="${k}">${I(ic,21)}${t.tabs[k]}</button>`).join("");
+  $("#tabs").innerHTML=Object.entries({home:"home",rooms:"rooms",car:"car",scenes:"spark",energy:"bolt"}).map(([k,ic])=>`<button class="${tab===k?"on":""}" data-tab="${k}">${I(ic,21)}${t.tabs[k]}</button>`).join("");
   $("#view").innerHTML=V[tab]();}
 function refresh(){ // re-render without replaying entrance animations
   $("#view").querySelectorAll("[style*=animation-delay]").forEach(e=>e.style.animation="none");
