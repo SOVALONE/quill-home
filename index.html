@@ -2,41 +2,44 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b0b10">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0a0a0f">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="description" content="Quill Home — smart home app concept by Obsidian Quill">
 <title>Quill Home — Obsidian Quill</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon.svg">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
+<div class="glow"></div>
 <div class="app">
   <header class="top">
     <div>
-      <p class="muted" id="greet"></p>
-      <h1>Quill Home</h1>
+      <p class="greet" id="greet"></p>
+      <h1 id="title">Quill Home</h1>
     </div>
-    <button class="lang" id="langBtn" aria-label="Language">UA</button>
+    <div class="top-r">
+      <button class="pill" id="langBtn" aria-label="Language">UA</button>
+      <div class="avatar">OQ</div>
+    </div>
   </header>
-
   <main id="view"></main>
-
-  <nav class="tabs">
-    <button data-tab="home" class="on"><span>⌂</span><b data-i="home"></b></button>
-    <button data-tab="rooms"><span>▦</span><b data-i="rooms"></b></button>
-    <button data-tab="scenes"><span>✦</span><b data-i="scenes"></b></button>
-    <button data-tab="energy"><span>ϟ</span><b data-i="energy"></b></button>
-  </nav>
 </div>
 
-<div class="sheet" id="sheet" hidden>
-  <div class="sheet-card" id="sheetBody"></div>
+<nav class="tabs" id="tabs"></nav>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet-card" id="sheetCard">
+    <div class="grab"></div>
+    <div id="sheetBody"></div>
+  </div>
 </div>
 <div class="toast" id="toast"></div>
 
-<script src="app.js"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>
